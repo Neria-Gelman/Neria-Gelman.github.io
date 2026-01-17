@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Blog</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #1a1a1a;
+            --text: #e8e8e8;
+            --text-dim: #999999;
+            --accent: #4a9eff;
+            --accent-dim: #2d5f99;
+            --border: #333333;
+            --highlight: #2a2a2a;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'JetBrains Mono', monospace;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.8;
+            font-size: 15px;
+            font-weight: 300;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+        }
+
+        /* Header */
+        header {
+            margin-bottom: 4rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid var(--border);
+        }
+
+        h1 {
+            font-size: 2rem;
+            font-weight: 400;
+            margin-bottom: 0.5rem;
+            color: var(--text);
+        }
+
+        .tagline {
+            color: var(--text-dim);
+            font-size: 0.9rem;
+        }
+
+        /* Navigation */
+        nav {
+            margin-top: 1.5rem;
+        }
+
+        nav a {
+            color: var(--accent);
+            text-decoration: none;
+            margin-right: 1.5rem;
+            font-size: 0.85rem;
+            transition: color 0.2s ease;
+        }
+
+        nav a:hover {
+            color: var(--text);
+            text-decoration: underline;
+        }
+
+        /* Article List */
+        .article-list {
+            margin-top: 3rem;
+        }
+
+        article {
+            margin-bottom: 3rem;
+            padding: 2rem;
+            background: var(--highlight);
+            border-left: 3px solid var(--accent-dim);
+            transition: border-color 0.3s ease;
+        }
+
+        article:hover {
+            border-left-color: var(--accent);
+        }
+
+        .article-meta {
+            font-size: 0.8rem;
+            color: var(--text-dim);
+            margin-bottom: 1rem;
+        }
+
+        .article-title {
+            font-size: 1.4rem;
+            font-weight: 500;
+            margin-bottom: 1rem;
+            color: var(--text);
+        }
+
+        .article-title a {
+            color: var(--text);
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        .article-title a:hover {
+            color: var(--accent);
+        }
+
+        .article-excerpt {
+            color: var(--text-dim);
+            line-height: 1.7;
+            margin-bottom: 1rem;
+        }
+
+        .read-more {
+            color: var(--accent);
+            text-decoration: none;
+            font-size: 0.85rem;
+            display: inline-block;
+            transition: color 0.2s ease;
+        }
+
+        .read-more:hover {
+            color: var(--text);
+        }
+
+        .read-more::after {
+            content: " →";
+        }
+
+        /* Footer */
+        footer {
+            margin-top: 5rem;
+            padding-top: 2rem;
+            border-top: 1px solid var(--border);
+            text-align: center;
+            color: var(--text-dim);
+            font-size: 0.8rem;
+        }
+
+        footer a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Accent elements */
+        .chevron {
+            color: var(--text-dim);
+            margin-right: 0.5rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .container {
+                padding: 2rem 1.5rem;
+            }
+
+            h1 {
+                font-size: 1.5rem;
+            }
+
+            article {
+                padding: 1.5rem;
+            }
+
+            .article-title {
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><span class="chevron">∨</span>Your Blog Name</h1>
+            <p class="tagline">Thoughts, ideas, and observations</p>
+            <nav>
+                <a href="#home">home</a>
+                <a href="#about">about</a>
+                <a href="#archive">archive</a>
+                <a href="#contact">contact</a>
+            </nav>
+        </header>
+
+        <main class="article-list">
+            <article>
+                <div class="article-meta">2025-01-15 · 5 min read</div>
+                <h2 class="article-title">
+                    <a href="posts/first-post.html">Getting Started with GitHub Pages</a>
+                </h2>
+                <p class="article-excerpt">
+                    Setting up a blog on GitHub Pages is easier than you might think. This post walks through the basics of getting your site up and running, customizing the design, and publishing your first post. No complex build tools required - just HTML, CSS, and your thoughts.
+                </p>
+                <a href="posts/first-post.html" class="read-more">read more</a>
+            </article>
+
+            <article>
+                <div class="article-meta">2025-01-10 · 3 min read</div>
+                <h2 class="article-title">
+                    <a href="posts/second-post.html">Why Write?</a>
+                </h2>
+                <p class="article-excerpt">
+                    Writing clarifies thinking. When you force yourself to articulate an idea in words, you discover gaps in your understanding. You refine vague notions into concrete thoughts. This is why maintaining a blog isn't just about sharing - it's about learning.
+                </p>
+                <a href="posts/second-post.html" class="read-more">read more</a>
+            </article>
+
+            <article>
+                <div class="article-meta">2025-01-05 · 7 min read</div>
+                <h2 class="article-title">
+                    <a href="posts/third-post.html">The Art of Simple Design</a>
+                </h2>
+                <p class="article-excerpt">
+                    Good design isn't about adding more - it's about removing everything unnecessary. A dark background, a monospace font, clean typography. Sometimes the most powerful interfaces are the ones that get out of the way and let the content speak.
+                </p>
+                <a href="posts/third-post.html" class="read-more">read more</a>
+            </article>
+        </main>
+
+        <footer>
+            <p>Built with care · Hosted on <a href="https://pages.github.com/" target="_blank">GitHub Pages</a></p>
+            <p style="margin-top: 0.5rem;">© 2025 Your Name</p>
+        </footer>
+    </div>
+</body>
+</html>
