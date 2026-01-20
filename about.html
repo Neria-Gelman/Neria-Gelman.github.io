@@ -6,16 +6,14 @@
     <title>About - Neria Gelman</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
         :root {
-            --bg: #1a1a1a;
-            --text: #e8e8e8;
-            --text-dim: #999999;
-            --accent: #4a9eff;
-            --accent-dim: #2d5f99;
-            --border: #333333;
-            --highlight: #2a2a2a;
+            --bg: #000000;
+            --text: #ffffff;
+            --text-dim: #808080;
+            --accent: #e63946;
+            --border: #1a1a1a;
         }
 
         * {
@@ -25,169 +23,173 @@
         }
 
         body {
-            font-family: 'JetBrains Mono', monospace;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
             background: var(--bg);
             color: var(--text);
-            line-height: 1.8;
-            font-size: 15px;
-            font-weight: 300;
+            line-height: 1.6;
+            font-size: 17px;
+            font-weight: 400;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
         }
 
         .container {
-            max-width: 900px;
+            max-width: 920px;
             margin: 0 auto;
-            padding: 3rem 2rem;
+            padding: 5rem 3rem;
         }
 
         /* Header */
         header {
-            margin-bottom: 4rem;
-            padding-bottom: 2rem;
-            border-bottom: 1px solid var(--border);
+            margin-bottom: 6rem;
         }
 
         h1 {
-            font-size: 2rem;
-            font-weight: 400;
-            margin-bottom: 0.5rem;
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
             color: var(--text);
+            letter-spacing: -0.03em;
         }
 
         .tagline {
             color: var(--text-dim);
-            font-size: 0.9rem;
+            font-size: 1.1rem;
+            font-weight: 400;
+            letter-spacing: -0.01em;
         }
 
         /* Navigation */
         nav {
-            margin-top: 1.5rem;
+            margin-top: 2rem;
         }
 
         nav a {
-            color: var(--accent);
+            color: var(--text);
             text-decoration: none;
-            margin-right: 1.5rem;
-            font-size: 0.85rem;
+            margin-right: 2rem;
+            font-size: 0.95rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
             transition: color 0.2s ease;
         }
 
         nav a:hover {
-            color: var(--text);
-            text-decoration: underline;
+            color: var(--accent);
         }
 
         /* Content */
         .about-content {
-            margin-top: 3rem;
+            margin-top: 4rem;
         }
 
         .section {
-            margin-bottom: 4rem;
+            margin-bottom: 5rem;
         }
 
         .section-title {
-            font-size: 1.5rem;
-            font-weight: 500;
-            margin-bottom: 2rem;
-            color: var(--accent);
-            border-bottom: 1px solid var(--border);
-            padding-bottom: 0.5rem;
+            font-size: 2.2rem;
+            font-weight: 700;
+            margin-bottom: 3rem;
+            color: var(--text);
+            letter-spacing: -0.03em;
         }
 
         .experience-item {
-            margin-bottom: 2.5rem;
-            padding: 1.5rem;
-            background: var(--highlight);
-            border-left: 3px solid var(--accent-dim);
-            transition: border-color 0.3s ease;
+            margin-bottom: 3rem;
+            padding-bottom: 3rem;
+            border-bottom: 1px solid var(--border);
         }
 
-        .experience-item:hover {
-            border-left-color: var(--accent);
+        .experience-item:last-child {
+            border-bottom: none;
         }
 
         .job-title {
-            font-size: 1.1rem;
-            font-weight: 500;
+            font-size: 1.5rem;
+            font-weight: 600;
             color: var(--text);
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.75rem;
+            letter-spacing: -0.02em;
         }
 
         .company {
             color: var(--accent);
-            font-size: 0.95rem;
-            margin-bottom: 0.3rem;
+            font-size: 1rem;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
         }
 
         .duration {
             color: var(--text-dim);
-            font-size: 0.85rem;
+            font-size: 0.9rem;
             margin-bottom: 0.3rem;
         }
 
         .location {
             color: var(--text-dim);
-            font-size: 0.8rem;
+            font-size: 0.9rem;
         }
 
         .education-item {
-            padding: 1.5rem;
-            background: var(--highlight);
-            border-left: 3px solid var(--accent-dim);
+            padding-bottom: 2rem;
         }
 
         .school-name {
-            font-size: 1.1rem;
-            font-weight: 500;
-            color: var(--accent);
-            margin-bottom: 0.5rem;
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--text);
+            letter-spacing: -0.02em;
         }
 
         /* Footer */
         footer {
-            margin-top: 5rem;
-            padding-top: 2rem;
+            margin-top: 6rem;
+            padding-top: 3rem;
             border-top: 1px solid var(--border);
             text-align: center;
             color: var(--text-dim);
-            font-size: 0.8rem;
+            font-size: 0.85rem;
         }
 
         footer a {
-            color: var(--accent);
-            text-decoration: none;
+            color: var(--text-dim);
+            text-decoration: underline;
+            transition: color 0.2s ease;
         }
 
         footer a:hover {
-            text-decoration: underline;
+            color: var(--text);
         }
 
         /* Accent elements */
         .chevron {
-            color: var(--text-dim);
+            color: var(--accent);
             margin-right: 0.5rem;
         }
 
         /* Responsive */
         @media (max-width: 768px) {
             .container {
-                padding: 2rem 1.5rem;
+                padding: 3rem 2rem;
             }
 
             h1 {
-                font-size: 1.5rem;
+                font-size: 2rem;
             }
 
             .section-title {
-                font-size: 1.3rem;
-            }
-
-            .experience-item {
-                padding: 1rem;
+                font-size: 1.6rem;
             }
 
             .job-title {
-                font-size: 1rem;
+                font-size: 1.2rem;
+            }
+
+            nav a {
+                margin-right: 1.5rem;
+                font-size: 0.85rem;
             }
         }
     </style>
@@ -200,7 +202,6 @@
             <nav>
                 <a href="index.html">home</a>
                 <a href="about.html">about</a>
-                <a href="https://www.linkedin.com/in/neria-gelman-173507253/" target="_blank">linkedin</a>
             </nav>
         </header>
 
