@@ -26,38 +26,57 @@
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
             background: var(--bg);
             color: var(--text);
-            line-height: 1.7;
-            font-size: 18px;
+            line-height: 1.6;
+            font-size: 17px;
             font-weight: 400;
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
         }
 
         .container {
-            max-width: 720px;
+            max-width: 920px;
             margin: 0 auto;
-            padding: 4rem 3rem;
+            padding: 5rem 3rem;
         }
 
         /* Header */
-        .back-link {
+        header {
+            margin-bottom: 6rem;
+        }
+
+        h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: var(--text);
+            letter-spacing: -0.03em;
+        }
+
+        .tagline {
             color: var(--text-dim);
+            font-size: 1.1rem;
+            font-weight: 400;
+            letter-spacing: -0.01em;
+        }
+
+        /* Navigation */
+        nav {
+            margin-top: 2rem;
+        }
+
+        nav a {
+            color: var(--text);
             text-decoration: none;
-            font-size: 0.9rem;
+            margin-right: 2rem;
+            font-size: 0.95rem;
             font-weight: 500;
-            display: inline-block;
-            margin-bottom: 3rem;
             text-transform: uppercase;
-            letter-spacing: 0.08em;
+            letter-spacing: 0.05em;
             transition: color 0.2s ease;
         }
 
-        .back-link:hover {
-            color: var(--text);
-        }
-
-        .back-link::before {
-            content: "← ";
+        nav a:hover {
+            color: var(--accent);
         }
 
         /* Article */
@@ -67,15 +86,6 @@
 
         .article-header {
             margin-bottom: 4rem;
-        }
-
-        h1 {
-            font-size: 3rem;
-            font-weight: 700;
-            margin-bottom: 1.5rem;
-            color: var(--text);
-            line-height: 1.15;
-            letter-spacing: -0.03em;
         }
 
         .article-meta {
@@ -183,6 +193,12 @@
             color: var(--text);
         }
 
+        /* Accent elements */
+        .chevron {
+            color: var(--accent);
+            margin-right: 0.5rem;
+        }
+
         /* Responsive */
         @media (max-width: 768px) {
             .container {
@@ -200,15 +216,20 @@
             .article-content h3 {
                 font-size: 1.2rem;
             }
+
+            nav a {
+                margin-right: 1.5rem;
+                font-size: 0.85rem;
+            }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <header style="margin-bottom: 3rem;">
-            <nav style="display: flex; gap: 2rem;">
-                <a href="../index.html" style="color: var(--text); text-decoration: none; font-size: 0.95rem; font-weight: 500; text-transform: uppercase; letter-spacing: 0.05em; transition: color 0.2s ease;" onmouseover="this.style.color='var(--accent)'" onmouseout="this.style.color='var(--text)'">home</a>
-                <a href="../about.html" style="color: var(--text); text-decoration: none; font-size: 0.95rem; font-weight: 500; text-transform: uppercase; letter-spacing: 0.05em; transition: color 0.2s ease;" onmouseover="this.style.color='var(--accent)'" onmouseout="this.style.color='var(--text)'">about</a>
+        <header>
+            <nav>
+                <a href="../index.html">home</a>
+                <a href="../about.html">about</a>
             </nav>
         </header>
 
