@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Post Title Here - Your Blog</title>
+    <title>Your Post Title Here - Neria Gelman</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -41,7 +41,42 @@
 
         /* Header */
         header {
-            margin-bottom: 3rem;
+            margin-bottom: 6rem;
+        }
+
+        h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: var(--text);
+            letter-spacing: -0.03em;
+        }
+
+        .tagline {
+            color: var(--text-dim);
+            font-size: 1.1rem;
+            font-weight: 400;
+            letter-spacing: -0.01em;
+        }
+
+        /* Navigation */
+        nav {
+            margin-top: 2rem;
+        }
+
+        nav a {
+            color: var(--text);
+            text-decoration: none;
+            margin-right: 2rem;
+            font-size: 0.95rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            transition: color 0.2s ease;
+        }
+
+        nav a:hover {
+            color: var(--accent);
         }
 
         /* Article */
@@ -51,15 +86,6 @@
 
         .article-header {
             margin-bottom: 4rem;
-        }
-
-        h1 {
-            font-size: 3rem;
-            font-weight: 700;
-            margin-bottom: 1.5rem;
-            color: var(--text);
-            line-height: 1.15;
-            letter-spacing: -0.03em;
         }
 
         .article-meta {
@@ -147,27 +173,6 @@
             font-size: 1.1rem;
         }
 
-        /* Navigation */
-        header nav {
-            display: flex;
-            gap: 2rem;
-            margin-bottom: 3rem;
-        }
-
-        nav a {
-            color: var(--text);
-            text-decoration: none;
-            font-size: 0.95rem;
-            font-weight: 500;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-            transition: color 0.2s ease;
-        }
-
-        nav a:hover {
-            color: var(--accent);
-        }
-
         /* Footer */
         footer {
             margin-top: 6rem;
@@ -188,6 +193,12 @@
             color: var(--text);
         }
 
+        /* Accent elements */
+        .chevron {
+            color: var(--accent);
+            margin-right: 0.5rem;
+        }
+
         /* Responsive */
         @media (max-width: 768px) {
             .container {
@@ -204,6 +215,11 @@
 
             .article-content h3 {
                 font-size: 1.2rem;
+            }
+
+            nav a {
+                margin-right: 1.5rem;
+                font-size: 0.85rem;
             }
         }
     </style>
