@@ -163,6 +163,27 @@
             font-size: 1.1rem;
         }
 
+        /* Navigation */
+        header nav {
+            display: flex;
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        nav a {
+            color: var(--text);
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            transition: color 0.2s ease;
+        }
+
+        nav a:hover {
+            color: var(--accent);
+        }
+
         /* Footer */
         footer {
             margin-top: 6rem;
@@ -171,6 +192,16 @@
             text-align: center;
             color: var(--text-dim);
             font-size: 0.85rem;
+        }
+
+        footer a {
+            color: var(--text-dim);
+            text-decoration: underline;
+            transition: color 0.2s ease;
+        }
+
+        footer a:hover {
+            color: var(--text);
         }
 
         /* Responsive */
@@ -195,10 +226,10 @@
 </head>
 <body>
     <div class="container">
-        <header style="margin-bottom: 3rem;">
-            <nav style="display: flex; gap: 2rem;">
-                <a href="index.html" style="color: var(--text); text-decoration: none; font-size: 0.95rem; font-weight: 500; text-transform: uppercase; letter-spacing: 0.05em; transition: color 0.2s ease;" onmouseover="this.style.color='var(--accent)'" onmouseout="this.style.color='var(--text)'">home</a>
-                <a href="about.html" style="color: var(--text); text-decoration: none; font-size: 0.95rem; font-weight: 500; text-transform: uppercase; letter-spacing: 0.05em; transition: color 0.2s ease;" onmouseover="this.style.color='var(--accent)'" onmouseout="this.style.color='var(--text)'">about</a>
+        <header>
+            <nav>
+                <a href="index.html">home</a>
+                <a href="about.html">about</a>
             </nav>
         </header>
 
@@ -277,7 +308,8 @@
         </article>
 
         <footer>
-            <p>© 2025 Your Name</p>
+            <p>Written with care · Hosted on <a href="https://pages.github.com/" target="_blank">GitHub Pages</a></p>
+            <p style="margin-top: 0.5rem;">© 2025 Neria Gelman</p>
         </footer>
     </div>
 </body>
