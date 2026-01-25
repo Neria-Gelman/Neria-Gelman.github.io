@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orbital Compute - Neria Gelman</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #000000;
+            --text: #ffffff;
+            --text-dim: #808080;
+            --accent: #e63946;
+            --border: #1a1a1a;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            font-size: 17px;
+            font-weight: 400;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .container {
+            max-width: 920px;
+            margin: 0 auto;
+            padding: 5rem 3rem;
+        }
+
+        /* Header */
+        header {
+            margin-bottom: 6rem;
+        }
+
+        h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: var(--text);
+            letter-spacing: -0.03em;
+        }
+
+        .tagline {
+            color: var(--text-dim);
+            font-size: 1.1rem;
+            font-weight: 400;
+            letter-spacing: -0.01em;
+        }
+
+        /* Navigation */
+        nav {
+            margin-top: 2rem;
+        }
+
+        nav a {
+            color: var(--text);
+            text-decoration: none;
+            margin-right: 2rem;
+            font-size: 0.95rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            transition: color 0.2s ease;
+        }
+
+        nav a:hover {
+            color: var(--accent);
+        }
+
+        /* Article */
+        article {
+            margin-bottom: 4rem;
+        }
+
+        .article-header {
+            margin-bottom: 4rem;
+        }
+
+        .article-meta {
+            font-size: 0.85rem;
+            color: var(--text-dim);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            font-weight: 500;
+        }
+
+        /* Content */
+        .article-content h2 {
+            font-size: 2rem;
+            font-weight: 700;
+            margin: 3.5rem 0 1.5rem;
+            color: var(--text);
+            line-height: 1.3;
+            letter-spacing: -0.02em;
+        }
+
+        .article-content h3 {
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin: 2.5rem 0 1rem;
+            color: var(--text);
+            letter-spacing: -0.01em;
+        }
+
+        .article-content p {
+            margin-bottom: 1.5rem;
+            color: var(--text);
+        }
+
+        .article-content a {
+            color: var(--accent);
+            text-decoration: none;
+            border-bottom: 1px solid var(--accent);
+            transition: opacity 0.2s ease;
+        }
+
+        .article-content a:hover {
+            opacity: 0.8;
+        }
+
+        .article-content code {
+            background: var(--border);
+            padding: 0.2rem 0.5rem;
+            border-radius: 3px;
+            font-size: 0.9em;
+            color: var(--accent);
+            font-family: 'Monaco', 'Courier New', monospace;
+        }
+
+        .article-content pre {
+            background: var(--border);
+            padding: 1.5rem;
+            border-radius: 3px;
+            overflow-x: auto;
+            margin: 2rem 0;
+            border-left: 3px solid var(--accent);
+        }
+
+        .article-content pre code {
+            background: none;
+            padding: 0;
+            color: var(--text);
+        }
+
+        .article-content ul, .article-content ol {
+            margin: 1.5rem 0;
+            padding-left: 2rem;
+            color: var(--text);
+        }
+
+        .article-content li {
+            margin-bottom: 0.75rem;
+        }
+
+        .article-content blockquote {
+            border-left: 3px solid var(--accent);
+            padding-left: 2rem;
+            margin: 2.5rem 0;
+            color: var(--text-dim);
+            font-style: italic;
+            font-size: 1.1rem;
+        }
+
+        /* Footer */
+        footer {
+            margin-top: 6rem;
+            padding-top: 3rem;
+            border-top: 1px solid var(--border);
+            text-align: center;
+            color: var(--text-dim);
+            font-size: 0.85rem;
+        }
+
+        footer a {
+            color: var(--text-dim);
+            text-decoration: underline;
+            transition: color 0.2s ease;
+        }
+
+        footer a:hover {
+            color: var(--text);
+        }
+
+        /* Accent elements */
+        .chevron {
+            color: var(--accent);
+            margin-right: 0.5rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .container {
+                padding: 3rem 2rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .article-content h2 {
+                font-size: 1.5rem;
+            }
+
+            .article-content h3 {
+                font-size: 1.2rem;
+            }
+
+            nav a {
+                margin-right: 1.5rem;
+                font-size: 0.85rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <nav>
+                <a href="../index.html">home</a>
+                <a href="../about.html">about</a>
+            </nav>
+        </header>
+
+        <article>
+            <header class="article-header">
+                <h1>Orbital Compute</h1>
+                <div class="article-meta">25/01/2026 · 4 min read</div>
+            </header>
+
+            <div class="article-content">
+                <p>
+                    Data centers are moving to space. What started as a fringe concept is now attracting serious investment as companies race to deploy computing infrastructure in orbit. The drivers are compelling: unlimited solar power, natural cooling in the vacuum of space, and freedom from terrestrial land constraints.
+                </p>
+
+                <h2>The Energy Equation</h2>
+
+                <p>
+                    Earth-based data centers consume roughly 1-2% of global electricity, and that number is climbing fast with AI workloads. Cooling alone accounts for 40% of a typical facility's energy use. In orbit, both problems largely disappear.
+                </p>
+
+                <p>
+                    Solar panels in space receive unfiltered sunlight 24/7 (with proper orbital positioning), generating power at efficiencies impossible on Earth's surface. Heat radiates directly into the cold of space—no chillers, no water consumption, no elaborate cooling towers.
+                </p>
+
+                <h2>Recent Milestones</h2>
+
+                <p>
+                    The past year has seen several breakthrough developments:
+                </p>
+
+                <ul>
+                    <li>Multiple startups have successfully demonstrated compute payloads in low Earth orbit</li>
+                    <li>Latency concerns are being addressed through edge computing architectures and inter-satellite links</li>
+                    <li>Launch costs continue to decline, making the economics increasingly viable</li>
+                    <li>Major cloud providers have announced partnerships with space infrastructure companies</li>
+                </ul>
+
+                <h2>The Latency Question</h2>
+
+                <p>
+                    Critics point to latency as the fundamental limitation. Light takes time to travel, and orbital distances add milliseconds that matter for certain applications. But this misses the point—orbital compute isn't meant to replace terrestrial infrastructure entirely.
+                </p>
+
+                <p>
+                    The ideal workloads are latency-tolerant but compute-intensive: AI model training, scientific simulations, batch processing, rendering. For these use cases, the energy and cooling advantages far outweigh the latency penalty.
+                </p>
+
+                <blockquote>
+                    "We're not competing with ground-based data centers. We're expanding the total compute capacity of civilization."
+                </blockquote>
+
+                <h2>Sustainability Implications</h2>
+
+                <p>
+                    The environmental case is surprisingly strong. Data centers currently strain power grids and water supplies in regions already facing resource constraints. Moving compute to space shifts that burden off-planet while utilizing solar energy that would otherwise go unharvested.
+                </p>
+
+                <p>
+                    The counterargument—launch emissions—is valid but temporary. As reusable launch vehicles mature and potentially transition to cleaner propellants, the lifecycle carbon footprint of orbital compute could fall well below terrestrial alternatives.
+                </p>
+
+                <h2>Looking Forward</h2>
+
+                <p>
+                    Orbital compute won't replace Earth-based infrastructure anytime soon. But it represents a genuine expansion of where and how we can process information. As AI demands continue to grow exponentially, having another frontier for computation isn't just interesting—it may become necessary.
+                </p>
+
+                <p>
+                    The companies solving orbital compute today are building infrastructure for a future where the question isn't whether to compute in space, but how much.
+                </p>
+            </div>
+        </article>
+
+        <footer>
+            <p>Written with care · Hosted on <a href="https://pages.github.com/" target="_blank">GitHub Pages</a></p>
+            <p style="margin-top: 0.5rem;">© 2025 Neria Gelman</p>
+        </footer>
+    </div>
+</body>
+</html>
